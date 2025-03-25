@@ -4,7 +4,7 @@ pubDatetime: 2025-03-21
 modDatetime: 2025-03-21
 title: Agent简介
 slug: AI
-featured: false
+featured: true
 draft: false
 tags:
   - Agent
