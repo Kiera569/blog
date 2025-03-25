@@ -54,3 +54,43 @@ const newObj = data => {
   });
 };
 ```
+
+Iterator
+一种标准化的遍历机制，通过 next() 方法逐个访问元素。
+核心机制：
+迭代协议:Iterable协议（必须包含[Symbol.iterator]方法，返回一个iterator） / Iterator协议（必须包含next()，返回一个{value: xx, done: boolean,}）
+
+实际用途：
+
+1. 统一遍历方式；
+2. 惰性求值；
+3. 解构赋值与扩展运算符
+4. 自定义数据结构遍历
+
+示例：获取斐波拉契数列
+
+```
+  const fibonacci = {
+    [Symbol.iterator]() {
+      let a = 0, b = 1;
+      return {
+        next() {
+          const current = a;
+          [a, b] = [b, a + b];
+          return { value: current, done: false }; // 无限迭代，永远不会 done: true
+        }
+      };
+    }
+  };
+
+  // 取前 5 个斐波那契数
+  let count = 0;
+  for (const num of fibonacci) {
+    if (count++ >= 5) break;
+    console.log(num); // 0, 1, 1, 2, 3
+  }
+```
+
+AsyncIterator
+基础概念： AsyncIterator允许支持异步迭代数据,每次调用next()就会返回一个promise，解析后得到下一个值。
+优点：使用for await...of调用，可以使异步代码看起来像同步代码，从而避免过多的promise.then()嵌套。
