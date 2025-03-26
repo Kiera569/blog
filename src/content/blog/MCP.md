@@ -3,11 +3,11 @@ author: Kiera
 pubDatetime: 2025-03-26
 modDatetime: 2025-03-26
 title: 初探MCP
-slug: AI
+slug: mcp
 featured: true
 draft: false
 tags:
-  - mcp
+  - ai
 description: Model Context Protocol，模型上下文协议。
 ---
 
