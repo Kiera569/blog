@@ -4,7 +4,7 @@ pubDatetime: 2024-04-02T13:05:56.066Z
 modDatetime: 2024-04-02
 title: react 面试题整理
 slug: react
-featured: true
+featured: false
 draft: false
 tags:
   - react

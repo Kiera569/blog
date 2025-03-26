@@ -4,7 +4,7 @@ pubDatetime: 2024-03-28T13:05:56.066Z
 modDatetime: 2024-03-28
 title: TypeScript面试题
 slug: typeScript
-featured: true
+featured: false
 draft: false
 tags:
   - typescript
